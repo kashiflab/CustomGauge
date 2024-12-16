@@ -27,26 +27,27 @@ dependencies {
 }
 
 // Publishing configuration for the library
-publishing {
-    publications {
-        release(MavenPublication) {
+afterEvaluate{
+    publishing {
+        publications {
+            release(MavenPublication) {
 //            from components.findByName('release')
-            groupId = 'com.github.kashiflab' // Replace with your GitHub username
-            artifactId = 'CustomGauge'
-            version = '1.0.14'
+                groupId = 'com.github.kashiflab' // Replace with your GitHub username
+                artifactId = 'CustomGauge'
+                version = '1.0.14'
+                artifact("$buildDir/outputs/aar/${project.name}-release.aar")
 
-            afterEvaluate {
-                from components.findByName('release')
+                // Include the AAR artifact
+//                artifact("$buildDir/outputs/aar/CustomGauge-release.aar")
             }
-
-            // Include the AAR artifact
-            artifact("$buildDir/outputs/aar/CustomGauge-release.aar")
         }
-    }
 
-    repositories {
-        maven {
-            url = uri("$buildDir/repos")
-        }
+//        repositories {
+//            maven {
+//                url = uri("$buildDir/repos")
+//            }
+//        }
     }
 }
+
+
