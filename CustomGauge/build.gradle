@@ -1,33 +1,12 @@
 apply plugin: 'com.android.library'
-
-ext {
-    publishedGroupId = 'pl.pawelkleczkowski.customgauge'
-    libraryName = 'CustomGauge'
-    artifact = 'CustomGauge'
-
-    libraryDescription = 'A simple gauge view for Android applications'
-
-    siteUrl = 'https://github.com/kashiflab/CustomGauge'
-    gitUrl = 'https://github.com/kashiflab/CustomGauge.git'
-
-    libraryVersion = '1.0.4'
-
-    developerId = 'kashiflab'
-    developerName = 'Kashif Lab'
-    developerEmail = 'your-email@example.com'
-
-    licenseName = 'Apache License 2.0'
-    licenseUrl = 'https://github.com/kashiflab/CustomGauge/blob/master/LICENSE'
-    allLicenses = ["APACHE-2.0"]
-}
+apply plugin: 'maven-publish'
 
 android {
-    compileSdkVersion 33 // Update this to the latest version if needed
-
+    compileSdkVersion 33
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 33
-        versionCode 4
+        versionCode 1
         versionName "1.0.4"
     }
     buildTypes {
@@ -38,7 +17,13 @@ android {
     }
 }
 
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'androidx.appcompat:appcompat:1.6.1' // Use AndroidX instead of support libraries
+publishing {
+    publications {
+        release(MavenPublication) {
+            from components.release
+            groupId = 'com.github.kashiflab'
+            artifactId = 'CustomGauge'
+            version = '1.0.4'
+        }
+    }
 }
