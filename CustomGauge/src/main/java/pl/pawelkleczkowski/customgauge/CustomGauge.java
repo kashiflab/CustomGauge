@@ -12,6 +12,8 @@ import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
 
+import pl.pawelkleczkowskicustomgauge.R;
+
 public class CustomGauge extends View {
 
     private static final int DEFAULT_LONG_POINTER_SIZE = 1;

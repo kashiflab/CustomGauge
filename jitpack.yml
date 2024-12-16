@@ -1,4 +1,3 @@
-# jitpack.yml
 jdk:
   - openjdk17
 
@@ -6,10 +5,8 @@ android:
   build: true
 
 gradle:
-  version: 8.0.2 # Update this to match your project's Gradle wrapper version
+  version: 8.0.2  # Update this to match your project's Gradle wrapper version
 
 install:
-  - chmod +x gradlew # Ensure gradlew is executable
-  - ./gradlew clean build
-  - ./gradlew build
-  - ./gradlew clean assembleRelease
+  - chmod +x gradlew  # Ensure gradlew is executable
+  - ./gradlew clean assembleRelease  # Single build command to clean and assemble
