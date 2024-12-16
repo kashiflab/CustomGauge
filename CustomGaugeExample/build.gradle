@@ -3,6 +3,8 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 28
 
+    namespace "pl.pawelkleczkowskicustomgauge"
+
     defaultConfig {
         applicationId "pl.pawelkleczkowskicustomgauge"
         minSdkVersion 15

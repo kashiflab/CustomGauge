@@ -3,12 +3,16 @@ apply plugin: 'maven-publish'
 
 android {
     compileSdkVersion 33
+
+    namespace "pl.pawelkleczkowski.customgauge"
+
     defaultConfig {
         minSdkVersion 21
         targetSdkVersion 33
         versionCode 1
         versionName "1.0.4"
     }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -20,8 +24,8 @@ android {
 publishing {
     publications {
         release(MavenPublication) {
-            from components.release
-            groupId = 'com.github.kashiflab'
+            from components.findByName('release')
+            groupId = 'com.github.kashiflab' // Replace with your GitHub username
             artifactId = 'CustomGauge'
             version = '1.0.4'
         }
