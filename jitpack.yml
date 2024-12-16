@@ -6,7 +6,7 @@ android:
   build: true
 
 gradle:
-  version: 7.2 # Use a newer Gradle version compatible with Android and Jitpack
+  version: 8.2 # Use a newer Gradle version compatible with Android and Jitpack
 
 install:
   - ./gradlew clean assembleRelease
