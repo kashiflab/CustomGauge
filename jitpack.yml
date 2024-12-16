@@ -9,4 +9,5 @@ gradle:
   version: 8.2 # Use a newer Gradle version compatible with Android and Jitpack
 
 install:
+  - chmod +x gradlew
   - ./gradlew clean assembleRelease
