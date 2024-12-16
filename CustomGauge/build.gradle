@@ -30,10 +30,14 @@ dependencies {
 publishing {
     publications {
         release(MavenPublication) {
-            from components.findByName('release')
+//            from components.findByName('release')
             groupId = 'com.github.kashiflab' // Replace with your GitHub username
             artifactId = 'CustomGauge'
             version = '1.0.12'
+
+            afterEvaluate {
+                from components.findByName('release')
+            }
         }
     }
 

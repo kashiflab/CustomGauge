@@ -1,0 +1,68 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Group ID should be your GitHub username (com.github.kashiflab) -->
+    <groupId>com.github.kashiflab</groupId>
+
+    <!-- Artifact ID should match your library name (CustomGauge) -->
+    <artifactId>CustomGauge</artifactId>
+
+    <!-- Version of your library -->
+    <version>1.0.10</version>
+
+    <!-- Packaging type for Android libraries -->
+    <packaging>aar</packaging>
+
+    <!-- Basic Project Information -->
+    <name>CustomGauge</name>
+    <description>A custom gauge view for Android applications.</description>
+    <url>https://github.com/kashiflab/CustomGauge</url>
+
+    <!-- Licensing Info (Optional, but highly recommended) -->
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <!-- Developer Information -->
+    <developers>
+        <developer>
+            <id>kashiflab</id>
+            <name>Kashif Ali Bhatti</name>
+            <email>kashif.alib42@gmail.com</email>
+        </developer>
+    </developers>
+
+    <!-- Source Control Information -->
+    <scm>
+        <connection>scm:git:git://github.com/kashiflab/CustomGauge.git</connection>
+        <developerConnection>scm:git:ssh://git@github.com/kashiflab/CustomGauge.git</developerConnection>
+        <url>https://github.com/kashiflab/CustomGauge</url>
+    </scm>
+
+    <!-- Dependencies -->
+    <dependencies>
+        <!-- AndroidX Core (from your Gradle dependencies) -->
+        <dependency>
+            <groupId>androidx.core</groupId>
+            <artifactId>core</artifactId>
+            <version>1.12.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Publishing information -->
+    <distributionManagement>
+        <repository>
+            <id>jitpack</id>
+            <name>JitPack Repository</name>
+            <url>https://jitpack.io</url>
+        </repository>
+    </distributionManagement>
+
+</project>
