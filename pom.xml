@@ -10,7 +10,7 @@
     <artifactId>CustomGauge</artifactId>
 
     <!-- Version of your library -->
-    <version>1.0.10</version>
+    <version>1.0.13</version>
 
     <!-- Packaging type for Android libraries -->
     <packaging>aar</packaging>

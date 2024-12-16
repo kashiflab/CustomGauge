@@ -10,7 +10,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 34
         versionCode 1
-        versionName "1.0.4"
+        versionName "1.0.13"
     }
 
     buildTypes {
@@ -33,7 +33,7 @@ publishing {
 //            from components.findByName('release')
             groupId = 'com.github.kashiflab' // Replace with your GitHub username
             artifactId = 'CustomGauge'
-            version = '1.0.12'
+            version = '1.0.13'
 
             afterEvaluate {
                 from components.findByName('release')
