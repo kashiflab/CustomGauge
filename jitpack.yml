@@ -1,13 +1,13 @@
 # jitpack.yml
 jdk:
-  - openjdk11
+  - openjdk17
 
 android:
   build: true
 
 gradle:
-  version: 8.2 # Use a newer Gradle version compatible with Android and Jitpack
+  version: 8.0.2 # Update this to match your project's Gradle wrapper version
 
 install:
-  - chmod +x gradlew
+  - chmod +x gradlew # Ensure gradlew is executable
   - ./gradlew clean assembleRelease
