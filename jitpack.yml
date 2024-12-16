@@ -10,4 +10,6 @@ gradle:
 
 install:
   - chmod +x gradlew # Ensure gradlew is executable
+  - ./gradlew clean build
+  - ./gradlew build
   - ./gradlew clean assembleRelease
